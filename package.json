@@ -1,5 +1,5 @@
 {
-  "name": "syndicodex",
+  "name": "@mcpcodex/syndicodex",
   "version": "1.0.0",
   "description": "🚀 Revolutionary Autonomous Development Intelligence CLI by Ethical AI Syndicate & MCPCodex. Multi-agent orchestration for autonomous code generation, analysis, and project management.",
   "keywords": [
@@ -44,7 +44,7 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "postinstall": "node -e \"console.log('\\n🚀 SyndiCodex installed successfully!\\n\\nNext steps:\\n  1. Run: syndicodex onboarding\\n  2. Visit: https://github.com/Ethical-AI-Syndicate/syndicodex\\n  3. NPM: https://www.npmjs.com/package/syndicodex\\n')\""
+    "postinstall": "node -e \"console.log('\\n🚀 SyndiCodex installed successfully!\\n\\nNext steps:\\n  1. Run: syndicodex onboarding\\n  2. Visit: https://github.com/Ethical-AI-Syndicate/syndicodex\\n  3. NPM: https://www.npmjs.com/package/@mcpcodex/syndicodex\\n')\""
   },
   "dependencies": {
     "chalk": "^4.1.2",
@@ -67,7 +67,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/mcpcodexnpm"
+    "type": "individual",
+    "url": "https://mcpcodex.ca"
   }
 }
