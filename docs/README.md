@@ -31,9 +31,6 @@ Welcome to the comprehensive documentation for SyndiCodex - Revolutionary Autono
 - **[Environment Variables](./api-reference/environment.md)** - Environment setup
 - **[Exit Codes](./api-reference/exit-codes.md)** - Return codes and meanings
 
-### 🛠️ Development
-- **[NPM Publishing Setup](./development/npm-publish-setup.md)** - Private repository publishing guide
-
 ## 🎯 Use Cases
 
 ### 🏢 Enterprise Development
