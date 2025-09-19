@@ -5,7 +5,7 @@ This guide explains how to set up automated NPM publishing for the **private Syn
 ## Repository Structure
 
 - **Public Repository**: `Ethical-AI-Syndicate/syndicodex` (documentation, community, examples)
-- **Private Repository**: Your private TypeScript codebase (actual CLI implementation)
+- **Private Repository**: `Ethical-AI-Syndicate/cli-coding-agent` (actual CLI implementation)
 
 ## NPM Publishing Workflow
 
@@ -13,7 +13,7 @@ The NPM publish CI/CD should be configured in your **private repository** where 
 
 ### 1. GitHub Actions Workflow
 
-Create `.github/workflows/npm-publish.yml` in your **private repository**:
+Create `.github/workflows/npm-publish.yml` in the **`Ethical-AI-Syndicate/cli-coding-agent`** repository:
 
 ```yaml
 name: Publish to NPM
@@ -130,7 +130,7 @@ jobs:
 
 ### 2. Package.json Configuration
 
-Ensure your private repository's `package.json` includes:
+Ensure the `Ethical-AI-Syndicate/cli-coding-agent` repository's `package.json` includes:
 
 ```json
 {
@@ -168,7 +168,7 @@ Ensure your private repository's `package.json` includes:
 
 ### 3. Required GitHub Secrets
 
-Configure these secrets in your **private repository**:
+Configure these secrets in the **`Ethical-AI-Syndicate/cli-coding-agent`** repository:
 
 1. **NPM_TOKEN**: Your NPM access token
    - Go to [npmjs.com](https://www.npmjs.com) → Account Settings → Access Tokens
@@ -193,13 +193,13 @@ npm org set mcpcodex mcpcodexnpm developer
 ### 5. Publishing Process
 
 #### Automated (Recommended)
-1. Create a GitHub release in your private repository
+1. Create a GitHub release in the `Ethical-AI-Syndicate/cli-coding-agent` repository
 2. The workflow will automatically build, test, and publish to NPM
 3. Package will be available as `@mcpcodex/syndicodex`
 
 #### Manual
 ```bash
-# In your private repository
+# In the cli-coding-agent repository
 npm run build
 npm test
 npm publish --access public
@@ -207,10 +207,10 @@ npm publish --access public
 
 ### 6. File Structure
 
-Your private repository should include these files for NPM publishing:
+The `Ethical-AI-Syndicate/cli-coding-agent` repository should include these files for NPM publishing:
 
 ```
-private-repo/
+cli-coding-agent/
 ├── src/                    # TypeScript source
 ├── dist/                   # Compiled JavaScript (gitignored, built in CI)
 ├── bin/                    # CLI executable scripts
