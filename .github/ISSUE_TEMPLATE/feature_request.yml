@@ -1,0 +1,121 @@
+name: 🚀 Feature Request
+description: Suggest a new feature or enhancement for SyndiCodex
+title: "[Feature]: "
+labels: ["enhancement", "feature-request"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! We love hearing ideas from our community.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Feature Summary"
+      description: "A brief summary of the feature you'd like to see"
+      placeholder: "Describe the feature in one or two sentences..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Problem Statement"
+      description: "What problem does this feature solve? What's the current limitation?"
+      placeholder: "Currently, SyndiCodex doesn't support..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: "Proposed Solution"
+      description: "Describe how you envision this feature working"
+      placeholder: "I would like SyndiCodex to..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Feature Category"
+      description: "Which area of SyndiCodex does this feature relate to?"
+      options:
+        - "Autonomous Workflows"
+        - "Code Generation"
+        - "Code Analysis"
+        - "Multi-Agent Orchestration"
+        - "Chat Interface"
+        - "Production Monitoring"
+        - "Security & Compliance"
+        - "Integration & API"
+        - "Configuration"
+        - "Performance"
+        - "Documentation"
+        - "Other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority Level"
+      description: "How important is this feature to you?"
+      options:
+        - "Low - Nice to have"
+        - "Medium - Would improve my workflow"
+        - "High - Important for my use case"
+        - "Critical - Blocking my adoption"
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: "Use Case Examples"
+      description: "Provide specific examples of how you would use this feature"
+      placeholder: |
+        Example 1: When working on microservices...
+        Example 2: During code reviews...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives Considered"
+      description: "Have you considered any alternative solutions or workarounds?"
+      placeholder: "I've tried using... but it doesn't work because..."
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: "Implementation Ideas"
+      description: "If you have ideas about how this could be implemented, share them here"
+      placeholder: "This could work by adding a new command like `syndicodx ...`"
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: "Estimated Implementation Effort"
+      description: "How complex do you think this feature would be to implement?"
+      options:
+        - "Small - Minor addition or configuration option"
+        - "Medium - New command or moderate enhancement"
+        - "Large - Major new functionality"
+        - "Unknown - Not sure about complexity"
+
+  - type: checkboxes
+    id: research
+    attributes:
+      label: "Research"
+      description: "Please confirm you've done some research:"
+      options:
+        - label: "I have searched for existing feature requests"
+          required: true
+        - label: "I have checked the documentation for existing solutions"
+          required: true
+        - label: "I would be interested in contributing to this feature"
+          required: false
