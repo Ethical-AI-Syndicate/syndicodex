@@ -62,7 +62,7 @@ syndicodex chat
 - **Node.js**: 18.0.0 or higher
 - **Operating System**: macOS, Linux, or Windows
 - **Memory**: 4GB RAM minimum (8GB recommended)
-- **API Keys**: OpenAI or Anthropic (configured during onboarding)
+- **API Keys**: OpenRouter recommended (supports 100+ AI models with smart selection)
 
 ---
 
@@ -177,7 +177,7 @@ Found a bug? Use the built-in feedback command:
 syndicodex feedback --type bug
 ```
 
-Or create a detailed issue on GitHub using our [bug report template](https://github.com/Ethical-AI-Syndicate/syndicodx/issues/new?assignees=&labels=bug&template=bug_report.yml).
+Or create a detailed issue on GitHub using our [bug report template](https://github.com/Ethical-AI-Syndicate/syndicodex/issues/new?assignees=&labels=bug&template=bug_report.yml).
 
 ### 🎯 **Feature Requests**
 Have ideas for new features? We'd love to hear them:
