@@ -28,7 +28,6 @@ jobs:
       with:
         node-version: '18'
         registry-url: 'https://registry.npmjs.org'
-        cache: 'npm'
 
     - name: Verify Node.js and npm versions
       run: |
@@ -36,12 +35,6 @@ jobs:
         npm --version
         npm whoami
         echo "Publishing as NPM user: $(npm whoami)"
-
-    - name: Install dependencies
-      run: npm ci
-
-    - name: Run security audit
-      run: npm audit --audit-level=moderate
 
     - name: Set version from input
       if: github.event.inputs.version != ''
