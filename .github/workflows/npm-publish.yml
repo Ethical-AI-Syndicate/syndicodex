@@ -34,6 +34,8 @@ jobs:
       run: |
         node --version
         npm --version
+        npm whoami
+        echo "Publishing as NPM user: $(npm whoami)"
 
     - name: Install dependencies
       run: npm ci
@@ -61,7 +63,7 @@ jobs:
 
     - name: Check if version already exists on NPM
       run: |
-        if npm view syndicodex@$PACKAGE_VERSION version 2>/dev/null; then
+        if npm view @mcpcodex/syndicodex@$PACKAGE_VERSION version 2>/dev/null; then
           echo "Version $PACKAGE_VERSION already exists on NPM"
           exit 1
         else
@@ -81,22 +83,22 @@ jobs:
     - name: Verify published package
       run: |
         sleep 30  # Wait for NPM to propagate
-        npm view syndicodex@$PACKAGE_VERSION
+        npm view @mcpcodex/syndicodex@$PACKAGE_VERSION
 
     - name: Create GitHub release summary
       run: |
         echo "## 🚀 SyndiCodex v$PACKAGE_VERSION Published Successfully!" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "### 📦 Package Information" >> $GITHUB_STEP_SUMMARY
-        echo "- **Package**: syndicodex" >> $GITHUB_STEP_SUMMARY
+        echo "- **Package**: @mcpcodex/syndicodex" >> $GITHUB_STEP_SUMMARY
         echo "- **Version**: $PACKAGE_VERSION" >> $GITHUB_STEP_SUMMARY
-        echo "- **Registry**: https://www.npmjs.com/package/syndicodex" >> $GITHUB_STEP_SUMMARY
+        echo "- **Registry**: https://www.npmjs.com/package/@mcpcodex/syndicodex" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "### 🛠️ Installation" >> $GITHUB_STEP_SUMMARY
         echo "\`\`\`bash" >> $GITHUB_STEP_SUMMARY
-        echo "npm install -g syndicodex@$PACKAGE_VERSION" >> $GITHUB_STEP_SUMMARY
+        echo "npm install -g @mcpcodex/syndicodex@$PACKAGE_VERSION" >> $GITHUB_STEP_SUMMARY
         echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "### 🔗 Links" >> $GITHUB_STEP_SUMMARY
-        echo "- [NPM Package](https://www.npmjs.com/package/syndicodex)" >> $GITHUB_STEP_SUMMARY
+        echo "- [NPM Package](https://www.npmjs.com/package/@mcpcodex/syndicodex)" >> $GITHUB_STEP_SUMMARY
         echo "- [Documentation](https://github.com/Ethical-AI-Syndicate/syndicodex/blob/main/docs)" >> $GITHUB_STEP_SUMMARY

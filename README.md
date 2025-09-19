@@ -4,7 +4,7 @@
 
 **Revolutionary Autonomous Development Intelligence**
 
-[![npm version](https://img.shields.io/npm/v/syndicodex.svg)](https://www.npmjs.com/package/syndicodex)
+[![npm version](https://img.shields.io/npm/v/@mcpcodex/syndicodex.svg)](https://www.npmjs.com/package/@mcpcodex/syndicodex)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Ethical AI](https://img.shields.io/badge/Ethical-AI-green)](https://aisyndicate.io)
@@ -41,7 +41,7 @@ SyndiCodex is an **autonomous development intelligence CLI** that harnesses mult
 ### Installation
 
 ```bash
-npm install -g syndicodex
+npm install -g @mcpcodex/syndicodex
 ```
 
 ### Get Started in 30 Seconds
